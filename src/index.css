@@ -7,9 +7,369 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/*
-Tatva soft css for register page
-*/
+
+/*My CSS starts here*/
+/*my css of serach bar*/
+.login-page {
+  background-color: white;
+}
+
+.login-wrapper {
+  margin-bottom: 20px;
+}
+
+.searchbar-container-main {
+  margin: auto;
+  color: rgb(33, 33, 33);
+  align-items: center;
+}
+
+.search-bar-form {
+  padding: 20px 0px;
+  margin: 0 auto;
+
+  width: 50%;
+  align-items: center;
+}
+
+#search-input-bar {
+  width: 422px;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#search-button {
+  height: 40px;
+  font-size: 16px;
+  padding: 2px;
+  background-color: #80bf32;
+  max-width: 129px;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  margin-right: 10px;
+}
+
+#cancel-button {
+  height: 40px;
+  font-size: 16px;
+  background-color: #f14d54;
+  padding: 2px;
+  border-radius: 5px;
+  max-width: 129px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+}
+
+.login-form-main-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.new-customer {
+  size: 20px;
+  font-family: roboto;
+  color: #414141;
+  margin-bottom: 20px;
+}
+
+.test-left-start {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-family: roboto-light;
+  color: #838383;
+}
+
+.left-list-items {
+  margin-top: 15px;
+  list-style-type: circle;
+}
+.left-list-items li {
+  padding-bottom: 15px;
+}
+
+.create-account-button {
+  margin-top: 120px;
+  width: 220px;
+  background-color: #f14d54;
+  color: white;
+  text-align: center;
+  height: 45px;
+}
+
+.login-info {
+  margin-top: 20px;
+}
+
+.login-info input:first-of-type {
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+.login-info input:nth-of-type(2n) {
+  margin-top: 15px;
+}
+
+.login-button {
+  margin-top: 60px;
+  height: 45px;
+  text-align: center;
+  width: 100px;
+  background-color: #f14d54;
+  color: white;
+}
+
+.footer-margin-top {
+  margin-top: 20px;
+}
+
+.listing-page {
+  background-color: white;
+}
+.listing-title {
+  text-align: center;
+  padding-top: 50px;
+  margin-bottom: 75px;
+}
+
+/*name-drop-down-container*/
+
+.name-drop-down-container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#product-sort {
+  margin-left: 10px;
+  border-radius: 5px;
+  width: 200px;
+  height: 40px;
+}
+
+/* product liting*/
+.cards-container {
+  margin-left: 40px;
+  margin-top: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+/*Card styling*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  font-family: arial;
+  border: #333;
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+
+.card img {
+  height: 200px;
+  width: 200px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: red;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.card-bottom {
+  padding: 10px;
+}
+
+.green-discount {
+  color: #509e2f;
+}
+
+.price-container {
+  margin-top: 10px;
+  display: flex;
+}
+
+.discount {
+  color: #509e2f;
+}
+
+.net-price {
+  margin-bottom: 10px;
+}
+
+/*  Cart page css starts here  */
+
+.cart-page h1 {
+  font-size: 32px;
+  padding-top: 50px;
+}
+
+.status-container {
+  margin: auto;
+  width: 50%;
+  padding-bottom: 30px;
+}
+
+.shopping-status {
+  width: 585.2px;
+}
+
+.bag-status-left {
+  float: left;
+}
+
+.total-bag-price {
+  float: right;
+}
+
+.bag-status-left p {
+  float: left;
+  padding-right: 5px;
+}
+
+.bag-status-left label {
+  float: left;
+}
+
+.total-bag-price label {
+  float: right;
+}
+
+.total-bag-price p {
+  float: right;
+  padding-right: 5px;
+}
+
+.cart-cards-container {
+  margin: auto;
+  width: 50%;
+}
+
+.cart-page {
+  background-color: white;
+}
+
+.cart-card-wrapper {
+  background-color: #e6e6e6;
+}
+
+.cart-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 149.2px;
+  border-radius: 1px;
+  background-color: #e6e6e6;
+  max-width: 585.2px;
+  font-family: arial;
+  border: #333;
+
+  margin-bottom: 30px;
+}
+
+.cart-card-left {
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.cart-card-left-1 {
+  float: left;
+}
+
+.cart-image {
+  width: 150px;
+  height: 117.2px;
+}
+
+.cart-card-left-2 {
+  float: left;
+  padding-left: 20px;
+}
+
+.cart-card-left-text p {
+  padding-top: 10px;
+}
+
+.cart-card-left-2 button {
+  background-color: red;
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+
+.cart-card-left-2 button:nth-of-type(2n) {
+  margin-left: 10px;
+}
+
+.cart-card-left-buttons {
+  padding-top: 15px;
+}
+
+.cart-card-left-2 input {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.cart-card-right {
+  float: right;
+  padding-right: 15px;
+}
+
+.price-discount {
+  padding-top: 10px;
+}
+
+.price-discount p {
+  float: right;
+  margin-left: 15px;
+}
+.price-discount label {
+  float: right;
+}
+
+.cart-card-right a {
+  color: red;
+}
+
+.place-order-container {
+  margin: auto;
+  width: 50%;
+}
+
+.place-order-wrapper {
+  width: 585.2px;
+}
+.place-order-wrapper button {
+  color: white;
+  margin-top: 35px;
+  padding: 5px;
+  width: 139.79px;
+  height: 40px;
+  background-color: red;
+  margin-bottom: 50px;
+}
+
+
+
+
+
+
+/* Tatva soft css starts here */
 
 html,
 body,
@@ -1253,357 +1613,4 @@ h2 {
 
 /*register css Tatvasoft ends here*/
 
-/*my css of serach bar*/
-.login-page {
-  background-color: white;
-}
 
-.login-wrapper {
-  margin-bottom: 20px;
-}
-
-.searchbar-container-main {
-  margin: auto;
-  color: rgb(33, 33, 33);
-  align-items: center;
-}
-
-.search-bar-form {
-  padding: 20px 0px;
-  margin: 0 auto;
-
-  width: 50%;
-  align-items: center;
-}
-
-#search-input-bar {
-  width: 422px;
-  height: 40px;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-
-#search-button {
-  height: 40px;
-  font-size: 16px;
-  padding: 2px;
-  background-color: #80bf32;
-  max-width: 129px;
-  border-radius: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: white;
-  margin-right: 10px;
-}
-
-#cancel-button {
-  height: 40px;
-  font-size: 16px;
-  background-color: #f14d54;
-  padding: 2px;
-  border-radius: 5px;
-  max-width: 129px;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: white;
-}
-
-.login-form-main-container {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-around;
-}
-
-.new-customer {
-  size: 20px;
-  font-family: roboto;
-  color: #414141;
-  margin-bottom: 20px;
-}
-
-.test-left-start {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 15px;
-  font-family: roboto-light;
-  color: #838383;
-}
-
-.left-list-items {
-  margin-top: 15px;
-  list-style-type: circle;
-}
-.left-list-items li {
-  padding-bottom: 15px;
-}
-
-.create-account-button {
-  margin-top: 120px;
-  width: 220px;
-  background-color: #f14d54;
-  color: white;
-  text-align: center;
-  height: 45px;
-}
-
-.login-info {
-  margin-top: 20px;
-}
-
-.login-info input:first-of-type {
-  margin-top: 15px;
-  margin-bottom: 40px;
-}
-
-.login-info input:nth-of-type(2n) {
-  margin-top: 15px;
-}
-
-.login-button {
-  margin-top: 60px;
-  height: 45px;
-  text-align: center;
-  width: 100px;
-  background-color: #f14d54;
-  color: white;
-}
-
-.footer-margin-top {
-  margin-top: 20px;
-}
-
-.listing-page {
-  background-color: white;
-}
-.listing-title {
-  text-align: center;
-  padding-top: 50px;
-  margin-bottom: 75px;
-}
-
-/*name-drop-down-container*/
-
-.name-drop-down-container {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-#product-sort {
-  margin-left: 10px;
-  border-radius: 5px;
-  width: 200px;
-  height: 40px;
-}
-
-/* product liting*/
-.cards-container {
-  margin-left: 40px;
-  margin-top: 45px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-/*Card styling*/
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 200px;
-  font-family: arial;
-  border: #333;
-  margin-bottom: 30px;
-  margin-right: 30px;
-}
-
-.card img {
-  height: 200px;
-  width: 200px;
-}
-
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: red;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-.card button:hover {
-  opacity: 0.7;
-}
-
-.card-bottom {
-  padding: 10px;
-}
-
-.green-discount {
-  color: #509e2f;
-}
-
-.price-container {
-  margin-top: 10px;
-  display: flex;
-}
-
-.discount {
-  color: #509e2f;
-}
-
-.net-price {
-  margin-bottom: 10px;
-}
-
-/*  Cart page css starts here  */
-
-.cart-page h1 {
-  font-size: 32px;
-  padding-top: 50px;
-}
-
-.status-container {
-  margin: auto;
-  width: 50%;
-  padding-bottom: 30px;
-}
-
-.shopping-status {
-  width: 585.2px;
-}
-
-.bag-status-left {
-  float: left;
-}
-
-.total-bag-price {
-  float: right;
-}
-
-.bag-status-left p {
-  float: left;
-  padding-right: 5px;
-}
-
-.bag-status-left label {
-  float: left;
-}
-
-.total-bag-price label {
-  float: right;
-}
-
-.total-bag-price p {
-  float: right;
-  padding-right: 5px;
-}
-
-.cart-cards-container {
-  margin: auto;
-  width: 50%;
-}
-
-.cart-page {
-  background-color: white;
-}
-
-.cart-card-wrapper {
-  background-color: #e6e6e6;
-}
-
-.cart-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  height: 149.2px;
-  border-radius: 1px;
-  background-color: #e6e6e6;
-  max-width: 585.2px;
-  font-family: arial;
-  border: #333;
-
-  margin-bottom: 30px;
-}
-
-.cart-card-left {
-  padding-top: 15px;
-  padding-left: 15px;
-}
-.cart-card-left-1 {
-  float: left;
-}
-
-.cart-image {
-  width: 150px;
-  height: 117.2px;
-}
-
-.cart-card-left-2 {
-  float: left;
-  padding-left: 20px;
-}
-
-.cart-card-left-text p {
-  padding-top: 10px;
-}
-
-.cart-card-left-2 button {
-  background-color: red;
-  color: white;
-  width: 20px;
-  height: 20px;
-}
-
-.cart-card-left-2 button:nth-of-type(2n) {
-  margin-left: 10px;
-}
-
-.cart-card-left-buttons {
-  padding-top: 15px;
-}
-
-.cart-card-left-2 input {
-  width: 20px;
-  height: 20px;
-  margin-left: 10px;
-}
-
-.cart-card-right {
-  float: right;
-  padding-right: 15px;
-}
-
-.price-discount {
-  padding-top: 10px;
-}
-
-.price-discount p {
-  float: right;
-  margin-left: 15px;
-}
-.price-discount label {
-  float: right;
-}
-
-.cart-card-right a {
-  color: red;
-}
-
-.place-order-container {
-  margin: auto;
-  width: 50%;
-}
-
-.place-order-wrapper {
-  width: 585.2px;
-}
-.place-order-wrapper button {
-  color: white;
-  margin-top: 35px;
-  padding: 5px;
-  width: 139.79px;
-  height: 40px;
-  background-color: red;
-  margin-bottom: 50px;
-}
