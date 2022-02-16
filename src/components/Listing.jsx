@@ -51,7 +51,7 @@ return(
         </div> 
 
         <div className="card">
-            <img src="./images/dummy-image.png" alt="Denim Jeans"/>
+            <img src="/images/dummy-image.png" alt="Denim Jeans"/>
             <div className='card-bottom'>
                 <h2>Product Title</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero maiores distinctio tempora ut amet, natus ullam enim susci</p>
@@ -63,7 +63,7 @@ return(
 
 
         <div className="card">
-            <img src="./images/dummy-image.png" alt="Denim Jeans"/>
+            <img src="/images/dummy-image.png" alt="Denim Jeans"/>
             <div className='card-bottom'>
                 <h2>Product Title</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero maiores distinctio tempora ut amet, natus ullam enim susci</p>
@@ -75,7 +75,7 @@ return(
 
 
         <div className="card">
-            <img src="./images/dummy-image.png" alt="Denim Jeans"/>
+            <img src="/images/dummy-image.png" alt="Denim Jeans"/>
             <div className='card-bottom'>
                 <h2>Product Title</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero maiores distinctio tempora ut amet, natus ullam enim susci</p>
@@ -86,19 +86,7 @@ return(
         </div> 
 
         <div className="card">
-            <img src="./images/dummy-image.png" alt="Denim Jeans"/>
-            <div className='card-bottom'>
-                <h2>Product Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero maiores distinctio tempora ut amet, natus ullam enim susci</p>
-                    <div className='price-container'><p>MRP <del>1000</del> <p className='discount'>20.00% OFF</p></p></div>
-                <p className='net-price'>800</p>
-                <button>Add to Cart</button>
-            </div>    
-        </div> 
-
-
-        <div className="card">
-            <img src="./images/dummy-image.png" alt="Denim Jeans"/>
+            <img src="/images/dummy-image.png" alt="Denim Jeans"/>
             <div className='card-bottom'>
                 <h2>Product Title</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero maiores distinctio tempora ut amet, natus ullam enim susci</p>
@@ -110,7 +98,7 @@ return(
 
 
         <div className="card">
-            <img src="./images/dummy-image.png" alt="Denim Jeans"/>
+            <img src="/images/dummy-image.png" alt="Denim Jeans"/>
             <div className='card-bottom'>
                 <h2>Product Title</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero maiores distinctio tempora ut amet, natus ullam enim susci</p>
@@ -122,7 +110,7 @@ return(
 
 
         <div className="card">
-            <img src="./images/dummy-image.png" alt="Denim Jeans"/>
+            <img src="/images/dummy-image.png" alt="Denim Jeans"/>
             <div className='card-bottom'>
                 <h2>Product Title</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero maiores distinctio tempora ut amet, natus ullam enim susci</p>
@@ -134,7 +122,7 @@ return(
 
 
         <div className="card">
-            <img src="./images/dummy-image.png" alt="Denim Jeans"/>
+            <img src="/images/dummy-image.png" alt="Denim Jeans"/>
             <div className='card-bottom'>
                 <h2>Product Title</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero maiores distinctio tempora ut amet, natus ullam enim susci</p>
@@ -146,7 +134,19 @@ return(
 
 
         <div className="card">
-            <img src="./images/dummy-image.png" alt="Denim Jeans"/>
+            <img src="/images/dummy-image.png" alt="Denim Jeans"/>
+            <div className='card-bottom'>
+                <h2>Product Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero maiores distinctio tempora ut amet, natus ullam enim susci</p>
+                    <div className='price-container'><p>MRP <del>1000</del> <p className='discount'>20.00% OFF</p></p></div>
+                <p className='net-price'>800</p>
+                <button>Add to Cart</button>
+            </div>    
+        </div> 
+
+
+        <div className="card">
+            <img src="/images/dummy-image.png" alt="Denim Jeans"/>
             <div className='card-bottom'>
                 <h2>Product Title</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero maiores distinctio tempora ut amet, natus ullam enim susci</p>
