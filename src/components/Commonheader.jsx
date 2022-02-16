@@ -10,7 +10,7 @@ const Commonheader = () => {
         <div className='container'>
           <div className='header-wrapper'>
             <div className='logo-wrapper'>
-              <a className='site-logo' title="logo" href="#"><img src="../images/site-logo.svg" alt="Tatvasoft"/></a>
+              <a className='site-logo' title="logo" href="#"><img src="/images/site-logo.svg" alt="Tatvasoft"/></a>
             </div>
             <div className='nav-wrapper'>
               <div className='top-right-bar'>
