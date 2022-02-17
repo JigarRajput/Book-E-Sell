@@ -1,13 +1,13 @@
 import React from 'react';
-import Commonheader from './Commonheader';
 import Searchbox from './Searchbox';
 import Footer from './Footer';
+import Header from './Header';
 
 const Register = () => {
 
   return(
     <> 
-    <Commonheader/>
+    <Header/>
     <Searchbox/>
     <section className="create-account-page-wrapper">
           <div className="container">

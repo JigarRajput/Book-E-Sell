@@ -1,12 +1,12 @@
 import React from 'react';
-import Commonheader from './Commonheader';
 import Footer from './Footer';
+import Header from './Header';
 import Searchbox from './Searchbox';
 const Login = () => {
 
     return (
         <div className='login-page'>
-           <Commonheader />
+         <Header/>
             <Searchbox />
             <div className='login-wrapper'>
             <div class="breadcrumb-wrapper">

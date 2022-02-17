@@ -1,13 +1,13 @@
 import React from 'react';
 import '../index.css';
-import Commonheader from './Commonheader';
 import Searchbox from './Searchbox';
 import Footer from './Footer';
+import Header from './Header';
 const Cart = () => {
 
     return(
         <>
-        <Commonheader/>
+        <Header/>
         <Searchbox/>
         <div className='cart-page'>
 
