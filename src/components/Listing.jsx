@@ -1,18 +1,16 @@
 import React from 'react';
-import Commonheader from './Commonheader';
 import Searchbox from './Searchbox';
 import Footer from './Footer';
 import '../index.css';
+import Header from './Header';
 
 const Listing = () => {
 return(
 <>
-            <Commonheader/>
+            <Header/>
             <Searchbox/>
     
     <div className='listing-page'>
-           
-  
             <h1 className='listing-title'>Product Listing</h1>
 
      <div className='name-drop-down-container'>
@@ -31,10 +29,6 @@ return(
         </div>
 
      </div>
-
-
-
-
 
 <div className='cards-container'>
 
