@@ -1,12 +1,33 @@
-import './App.css';
 import React from 'react';
-var App = React.createClass({
-  render: function() {
-    return (
-      <div>
-      </div>
-    );
-  }
-});
+
+import {
+  BrowserRouter,
+  Route,
+  Routes
+} from "react-router-dom";
+
+import Register from './components/Register';
+import Login from './components/Login';
+import Cart from './components/Cart';
+import Listing from './components/Listing'
+import Templisting from './components/TempListing';
+
+
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" exact element={<Listing />} />
+        <Route path="/cart" exact element={<Cart />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
 
 export default App;
+
+

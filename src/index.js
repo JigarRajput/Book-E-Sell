@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './index.css';
-import Register from './components/Register';
-import Login from './components/Login';
-import Listing from './components/Listing';
-import Cart from './components/Cart';
-import EditProduct from './components/EditProduct';
-import Header from './components/Header';
-import Product from './components/Product';
-import ProductDropDown from './components/ProductDropDown';
-ReactDOM.render(<ProductDropDown />,document.getElementById('root'));
+import Templisting from './components/TempListing';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
+
+  
+
+
+  ReactDOM.render(<App />,document.getElementById('root'));
+  // ReactDOM.render(<Templisting />,document.getElementById('root'));
+  
 

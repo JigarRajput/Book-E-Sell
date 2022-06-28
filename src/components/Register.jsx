@@ -2,126 +2,202 @@ import React from 'react';
 import Searchbox from './Searchbox';
 import Footer from './Footer';
 import Header from './Header';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import TextError from './TextError';
+import * as Yup from 'yup';
+import { Link } from 'react-router-dom';
+
+// initial value
+const initialValues = {
+  email: "",
+  password: "",
+  fname: "",
+  lname: "",
+  confirmPassword: ""
+}
+
+// Validation schema Yup
+
+const RegisterSchema = Yup.object().shape({
+  email: Yup.string()
+    .email("Invalid email address format")
+    .required("Email is required"),
+
+  fname: Yup.string().required("First name is required"),
+
+  password: Yup.string()
+    .min(4, "Password must be 4 characters at minimum")
+    .required("Password is required"),
+
+  //confirmPassword: Yup.string().min(4, "Password must be 4 characters at minimum") //.oneOf([Yup.ref('password'), null], "Password must match") // 
+
+  confirmPassword: Yup.string().test(
+    "passwords-match",
+    "Passwords must match",
+    function (value) {
+      return this.parent.password === value;
+    }
+  )
+
+});
+
 
 const Register = () => {
 
-  return(
-    <> 
-    <Header/>
-    <Searchbox/>
-    <section className="create-account-page-wrapper">
-          <div className="container">
-            <div className="breadcrumb-wrapper">
-              <ol>
-                <li>
-                  <a href="#" title="Home">Home</a>
-                </li>
-                <li>
-                  <p>Create an Account</p>
-                </li>
+  return (
+    <>
+      <Header />
+      {/* <Searchbox/> */}
+      <section className="create-account-page-wrapper">
+        <div className="container">
+          <div className="breadcrumb-wrapper d-flex justify-content-center pt-4">
+
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active "><Link to="/" className='badge text-light bg-dark text-decoration-none'>Home</Link></li>
+                <li class="breadcrumb-item "><Link to="/register" className='badge text-light bg-dark text-decoration-none'>Register</Link></li>
               </ol>
-            </div>
-            <h1>Login or Create an Account</h1>
-            <div className="create-account-row">
-              <form>
-                <div className="form-block">
-                  <div className="personal-information">
-                    <div className="personal-information-header">
-                      <h2>Personal Information</h2>
-                      <p>
-                        Please enter the following information to create your
-                        account.
-                      </p>
+            </nav>
+
+          </div>
+          <h1 className='my-5'>Login or Create an Account</h1>
+          <div className="container-fluid ">
+
+
+            <div className="personal-information">
+              <div className="personal-information-header">
+                <h3>Personal Information</h3>
+                <hr />
+                <p>
+                  Please enter the following information to create your
+                  account.
+                </p>
+              </div>
+
+
+              <Formik
+                initialValues={initialValues}
+                validationSchema={RegisterSchema}
+                onSubmit={(values) => {
+                  console.log(values);
+                  alert("Form is validated! Submitting the form...");
+                }}>
+                <Form>
+                  <div className="mt-4 row ">
+                    <div className="col-6 ">
+                      <div className="">
+
+                        <label for="first-name" id="first-name-label">First Name *</label>
+                        <Field
+                          type="text"
+                          className="form-control col-6"
+                          id="first-name"
+                          name="fname"
+                        />
+
+                        <ErrorMessage name="fname" component={TextError} />
+
+                      </div>
                     </div>
-                    <div className="form-row-wrapper">
-                      <div className="form-col">
-                        <div className="form-group">
-                          <label for="first-name" id="first-name-label"
-                            >First Name *</label
-                          >
-                          <input
-                            type="text"
-                            className="form-control"
-                            id="first-name"
-                          />
-                          <span className="error-msg">Invalid</span>
-                        </div>
+                    <div className="col-6 ">
+                      <div className="">
+
+                        <label for="last-name"
+                          id="last-name-label">
+                          Last Name *
+                        </label>
+
+                        <Field
+                          type="text"
+                          className="form-control"
+                          id="last-name"
+                          name="lname"
+                        />
+
+                        <ErrorMessage name="lname" component={TextError} />
+
+
                       </div>
-                      <div className="form-col">
-                        <div className="form-group">
-                          <label for="last-name" id="last-name-label"
-                            >Last Name *</label
-                          >
-                          <input
-                            type="text"
-                            className="form-control"
-                            id="last-name"
-                          />
-                          <span className="error-msg">Invalid</span>
-                        </div>
-                      </div>
-                      <div className="form-col full-width">
-                        <div className="form-group">
-                          <label for="email-address" id="email-address-label"
-                            >Email Adress *</label
-                          >
-                          <input
-                            type="text"
-                            className="form-control"
-                            id="email-address"
-                          />
-                          <span className="error-msg">Invalid</span>
-                        </div>
+                    </div>
+                    <div className="full-width mt-3">
+                      <div className="form-group">
+                        <label for="email-address" id="email-address-label"
+                        >Email Adress *</label
+                        >
+                        <Field
+                          type="text"
+                          className="form-control"
+                          id="email-address"
+                          name="email"
+                        />
+
+                        <ErrorMessage name="email" component={TextError} />
+
                       </div>
                     </div>
                   </div>
-                  <div className="login-information">
-                    <div className="personal-information-header">
-                      <h2>Login Information</h2>
-                    </div>
-                    <div className="form-row-wrapper">
-                      <div className="form-col">
-                        <div className="form-group">
-                          <label for="password" id="password-label"
-                            >Password *</label
-                          >
-                          <input
-                            type="password"
-                            className="form-control"
-                            id="password"
-                          />
-                          <span className="error-msg">Invalid</span>
-                        </div>
+                  {/* </Form>
+              </Formik> */}
+                  {/* </div> */}
+
+                  {/* <Formik>
+              <Form> */}
+                  <div className="login-information mt-5">
+
+                    <h2>Login Information</h2>
+                    <hr />
+
+                    <div className="row">
+                      <div className="col">
+
+
+
+                        <label for="password" id="password-label"
+                        >Password *</label
+                        >
+                        <Field
+                          type="password"
+                          className="form-control"
+                          id="password"
+                          name='password'
+                        />
+
+                        <ErrorMessage name="password" component={TextError} />
+
                       </div>
-                      <div className="form-col">
-                        <div className="form-group">
-                          <label
-                            for="confirm-password"
-                            id="confirm-password-label"
-                            >Confirm Password *</label
-                          >
-                          <input
-                            type="password"
-                            className="form-control"
-                            id="confirm-password"
-                          />
-                          <span className="error-msg">Invalid</span>
-                        </div>
+
+                      <div className="col">
+
+                        <label
+                          for="confirm-password"
+                          id="confirm-password-label">Confirm Password *</label>
+                        <Field
+                          type="password"
+                          className="form-control"
+                          id="confirm-password"
+                          name="confirmPassword"
+                        />
+
+                        <ErrorMessage name="confirmPassword" component={TextError} />
+
                       </div>
+
                     </div>
-                    <div className="btn-wrapper">
-                      <button className="btn blue-btn" type="submit">
+                    <div className="btn-wrapper mt-4 pb-5">
+                      <button className="btn btn-danger px-4 py-2" type="submit">
                         Register
                       </button>
                     </div>
                   </div>
-                </div>
-              </form>
+                </Form>
+              </Formik>
+
             </div>
           </div>
-        </section>
-  
-    <Footer/>
+        </div>
+      </section>
+
+      <Footer />
     </>
 
   )
