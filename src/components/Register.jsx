@@ -44,6 +44,48 @@ const RegisterSchema = Yup.object().shape({
 
 const Register = () => {
 
+  const handleRegister = async (event) => {
+
+    // Preventing Browser from reloading
+    event.preventDefault()
+
+    const email = event.target.elements.email.value
+    const password = event.target.elements.password.value
+    const fname = event.target.elements.fname.value
+    const lname = event.target.elements.lname.value
+
+    const response = await fetch('http://localhost:8121/user/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        fname: fname,
+        lname: lname,
+        email: email,
+        password: password
+      })
+    })
+
+    try {
+      const data = response.status
+      console.log(data)
+      if (data === 200)
+        alert("You  are Registered in successfully !!")
+
+      else
+        alert("User with this email and password already exists !!")
+
+      // if (data.success) {
+      //   // Dispatching login action to the store
+      //   dispatch(login({ loggedIn: true, userName: data.userName }))
+      // }
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }
+
   return (
     <>
       <Header />
@@ -78,11 +120,8 @@ const Register = () => {
               <Formik
                 initialValues={initialValues}
                 validationSchema={RegisterSchema}
-                onSubmit={(values) => {
-                  console.log(values);
-                  alert("Form is validated! Submitting the form...");
-                }}>
-                <Form>
+              >
+                <Form onSubmit={handleRegister}>
                   <div className="mt-4 row ">
                     <div className="col-6 ">
                       <div className="">

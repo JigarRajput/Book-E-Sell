@@ -10,7 +10,6 @@ import Register from './components/Register';
 import Login from './components/Login';
 import Cart from './components/Cart';
 import Listing from './components/Listing'
-import Templisting from './components/TempListing';
 
 
 

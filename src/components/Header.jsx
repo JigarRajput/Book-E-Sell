@@ -1,9 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../index.css';
 import { Link } from 'react-router-dom';
 import Cart from "./Cart";
+import store from '../redux/store';
+import { useDispatch, useSelector } from 'react-redux';
+import { searchAction } from '../redux/actions/searchAction';
+// import { store } from "../index"
 
-const Header = () => {
+const Header = (props) => {
+
+    const items = useSelector((state) => state.cart.numOfItems)
+    // console.log("selctor says", items)
+    //console.log("props header", props.numOfItems)
+
+    //dispatch
+
+    const [search_state, setSearch] = useState("")
+
+
+    const dispatch = useDispatch()
+
+    const handleChange = (event) => {
+
+        //prevent browser reloding
+        event.preventDefault();
+
+        const search_term = event.target.value;
+        setSearch(search_term)
+        dispatch(searchAction(search_term))
+        setSearch(search_term)
+        // console.log("you searched for", search_term)
+        // console.log("state after search", store.getState())
+    }
+
+    const handleSubmit = (event) => {
+
+        //prevent browser reloding
+        event.preventDefault();
+
+        const search_term = event.target.search.value;
+        dispatch(searchAction(search_term))
+        console.log("you searched for", search_term)
+        console.log("state after search", store.getState())
+    }
+
+    const st = useSelector((state) => state.search.term)
+    console.log("your search term in state", st)
 
     return (
         <div className='header-container-main '>
@@ -12,8 +54,8 @@ const Header = () => {
                     <Link to="/" ><img src="https://www.tatvasoft.com/blog/wp-content/uploads/2015/12/logo.png" alt="Tatvasoft" /></Link>
                 </div>
 
-                <form className="" action="">
-                    <input type="text" placeholder="What are you looking for.." name="search" id="search-input-bar" className="form-control "></input>
+                <form className="" action="" onSubmit={handleSubmit}>
+                    <input type="text" placeholder="What are you looking for.." name="search" id="search-input-bar" value={search_state} className="form-control " onChange={handleChange}></input>
                     <button type="submit" id="search-button" className="btn btn-success text-center"><img src="./images/search.svg" className="align-middle" />Search</button>
                     <button type="reset" id="cancel-button" className="btn btn-danger text-center p-2">Cancel</button>
                 </form>
@@ -21,7 +63,7 @@ const Header = () => {
                 <div className='link-cart-container'>
 
                     <div className='cart-container '>
-                        <Link to="/cart"><img src='images/cart.svg' /><span className='text-light'>0</span></Link>
+                        <Link to="/cart" className='text-decoration-none'><img src='images/cart.svg' /><strong><span className='text-light '>{items}</span></strong></Link>
                     </div>
 
                     <div className='link-container'>
@@ -39,5 +81,7 @@ const Header = () => {
 
 
 };
+
+
 
 export default Header;

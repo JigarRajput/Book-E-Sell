@@ -4,14 +4,17 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './index.css';
-import Templisting from './components/TempListing';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+//import store from './redux/store';
+import cartReducer from './redux/reducers/cartReducer';
+//const store = createStore(cartReducer);
+import store from './redux/store';
 
 
 
-  
 
-
-  ReactDOM.render(<App />,document.getElementById('root'));
+ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
   // ReactDOM.render(<Templisting />,document.getElementById('root'));
-  
+
 

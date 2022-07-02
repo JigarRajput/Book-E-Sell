@@ -48,9 +48,13 @@ const Login = () => {
     })
 
     try {
-      const data = await response.json()
+      const data = response.status
       console.log(data)
+      if (data === 200)
+        alert("You  are logged in successfully !!")
 
+      else
+        alert("Please enter correct email password")
 
       // if (data.success) {
       //   // Dispatching login action to the store
