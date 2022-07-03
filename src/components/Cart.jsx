@@ -15,14 +15,16 @@ const Cart = () => {
     var total_price = useSelector((state) => state.cart.total_price)
     console.log(total_price)
 
-    //total price calculation
-    //var total_price = 0
-    items.forEach(function (book) {
-        // dispatch(priceIncreaseAction(book.price))
-        //total_price = total_price + book.price - book.price * (book.discount / 100);
+    const login_status = useSelector((state) => state.login.isLoggedIn)
+    const orderHandler = () => {
 
+        console.log("your login status", login_status)
+        if (login_status === true)
+            alert("Your order is placed successfully !!!!")
+        if (login_status === false)
+            alert("Please do login for placing orders !!!!")
 
-    })
+    }
 
     return (
         <div>
@@ -53,7 +55,7 @@ const Cart = () => {
 
                 <div className='place-order-container'>
                     <div className='place-order-wrapper'>
-                        <button className='btn btn-danger ms-4'>Place Order</button>
+                        <button className='btn btn-danger ms-4' onClick={orderHandler}>Place Order</button>
                     </div>
                 </div>
 

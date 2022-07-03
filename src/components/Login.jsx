@@ -6,6 +6,8 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import TextError from './TextError';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { LOGIN_SUCCESS } from '../redux/actions/constants';
 
 
 const initialValues = {
@@ -28,6 +30,8 @@ const LoginSchema = Yup.object().shape({
 
 const Login = () => {
 
+  const dispatch = useDispatch()
+
   const handleLogin = async (event) => {
 
     // Preventing Browser from reloading
@@ -48,18 +52,25 @@ const Login = () => {
     })
 
     try {
-      const data = response.status
-      console.log(data)
-      if (data === 200)
+      const data = await response.json()
+      console.log(data.fName)
+      if (response.status === 200) {
         alert("You  are logged in successfully !!")
 
-      else
-        alert("Please enter correct email password")
+        const login_data = {
+          name: data.fName,
+          isLoggedIn: true
+        }
 
-      // if (data.success) {
-      //   // Dispatching login action to the store
-      //   dispatch(login({ loggedIn: true, userName: data.userName }))
-      // }
+        dispatch({ type: LOGIN_SUCCESS, data: login_data })
+      }
+
+
+      else {
+        alert("Please enter correct email password")
+        dispatch({ type: LOGIN_SUCCESS, isLoggedIn: false })
+      }
+
     }
     catch (err) {
       console.log(err);

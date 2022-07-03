@@ -5,6 +5,7 @@ import Cart from "./Cart";
 import store from '../redux/store';
 import { useDispatch, useSelector } from 'react-redux';
 import { searchAction } from '../redux/actions/searchAction';
+import LinkOrHeader from './LinkOrUser';
 // import { store } from "../index"
 
 const Header = (props) => {
@@ -47,6 +48,9 @@ const Header = (props) => {
     const st = useSelector((state) => state.search.term)
     console.log("your search term in state", st)
 
+    const user = useSelector((state) => state.login.name)
+    console.log("username from header", user)
+
     return (
         <div className='header-container-main '>
             <div className='header-wrapper-main bg-secondary '>
@@ -66,11 +70,14 @@ const Header = (props) => {
                         <Link to="/cart" className='text-decoration-none'><img src='images/cart.svg' /><strong><span className='text-light '>{items}</span></strong></Link>
                     </div>
 
-                    <div className='link-container'>
-                        <Link to="/login" className='text-decoration-none text-light '>Login</Link>
-                        <Link to="/Register" className='text-decoration-none text-light '>Register</Link>
+                    <div className=' link-container'>
+                        {/* <Link to="/login" className='text-decoration-none text-light '>Login</Link>
+                        <Link to="/Register" className='text-decoration-none text-light '>Register</Link> */}
+                        <LinkOrHeader user={user} />
 
                     </div>
+
+
 
                 </div>
 

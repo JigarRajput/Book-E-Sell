@@ -138,7 +138,7 @@ body {
 
 .link-container {
   /* margin: 30px 50px; */
-  margin-top: 1.5rem;
+  margin-top: 1.3rem;
   float: right;
 }
 
@@ -149,6 +149,14 @@ body {
 .link-container a {
   padding: 0px 5px;
   color: red;
+}
+
+.dropdown select {
+  width: 100px;
+  background-color: #6c757d;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  color: #e6e6e6;
 }
 
 .cart-container {

@@ -6,3 +6,5 @@ export const SET_PRODUCTS = "SET_PRODUCTS";
 export const SEARCH_TERM = "SEARCH_TERM";
 export const SORT_BY_ALPHA = "SORT_BY_ALPHA";
 export const SORT_BY_PRICE = "SORT_BY_PRICE";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESSFULL";
+export const NO_LOGIN = "NO_LOGIN";
