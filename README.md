@@ -12,9 +12,9 @@ This is basically an e-commerce web-app developed using Reactjs along with a bit
 
 ### /getbooks 
 #### gives all the books available in the database 
-there are other endpoints too but they are POST end point so...
+there are other endpoints too but they are POST end points so...
 
-### And by the way it is my first live project (deployed one 😅) of my life !!
+### And by the way it is the first live project (deployed one 😅) of my life !!
 
 
 
