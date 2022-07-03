@@ -8,5 +8,12 @@ This is basically an e-commerce web-app developed using Reactjs alog with using 
 ### [Complete Application](https://tatvasoft-frontend.herokuapp.com/)
 ### [REST API](https://rest-api-tatvasoft.herokuapp.com/)
 
+### following endpoint is working and useable simple by browser
+
+### /getbooks gives all the books available in the database 
+there are other endpoints too but they are post end point so...
+
+### And by the way it is my first live project (deployed one 😅) of my life !!
+
 
 
