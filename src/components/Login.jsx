@@ -40,7 +40,7 @@ const Login = () => {
     const email = event.target.elements.email.value
     const password = event.target.elements.password.value
 
-    const response = await fetch('http://localhost:8121/user/login', {
+    const response = await fetch('https://rest-api-tatvasoft.herokuapp.com/user/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -52,11 +52,10 @@ const Login = () => {
     })
 
     try {
-      const data = await response.json()
-      console.log(data.fName)
+
       if (response.status === 200) {
         alert("You  are logged in successfully !!")
-
+        const data = await response.json()
         const login_data = {
           name: data.fName,
           isLoggedIn: true
@@ -66,7 +65,7 @@ const Login = () => {
       }
 
 
-      else {
+      if (response.status != 200) {
         alert("Please enter correct email password")
         dispatch({ type: LOGIN_SUCCESS, isLoggedIn: false })
       }

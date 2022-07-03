@@ -54,18 +54,25 @@ const Register = () => {
     const fname = event.target.elements.fname.value
     const lname = event.target.elements.lname.value
 
-    const response = await fetch('http://localhost:8121/user/register', {
+    const response = await fetch('https://rest-api-tatvasoft.herokuapp.com/user/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        fname: fname,
-        lname: lname,
+        fName: fname,
+        lName: lname,
         email: email,
         password: password
       })
     })
+
+    console.log("registration details", JSON.stringify({
+      fname: fname,
+      lname: lname,
+      email: email,
+      password: password
+    }))
 
     try {
       const data = response.status

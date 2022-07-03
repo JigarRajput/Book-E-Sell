@@ -16,7 +16,7 @@ const Listing = () => {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8121/api/getbooks')
+        fetch('https://rest-api-tatvasoft.herokuapp.com/api/getbooks')
             .then(res => res.json())
             .then((data) => {
                 setBooks(data)
