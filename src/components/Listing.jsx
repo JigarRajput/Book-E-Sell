@@ -65,9 +65,16 @@ const Listing = () => {
 
 
     return (
-        <div>
+        <div className='bg-light'>
             <Header />
-            <div className='listing-page ' >
+            {/* <div className='container-fluid bg-light d-flex flex-row col-12 rounded justify-content-around py-2' style={{ height: "6rem", backgroundColor: "red" }}>
+                <div className=''><div className='card d-flex flex-column align-items-center' style={{ width: "90px", height: "80px" }}><img src='https://cdn-icons-png.flaticon.com/512/1830/1830844.png' className='' style={{ width: "50px", height: "50px" }} /><p className='card-title'>comics</p></div></div>
+                <div className=''><div className='card d-flex flex-column align-items-center ' style={{ width: "90px", height: "80px" }}><img src='https://cdn-icons-png.flaticon.com/512/1830/1830844.png' style={{ width: "50px", height: "50px" }} /><p>magazines</p></div></div>
+                <div className=''><div className='card d-flex flex-column align-items-center ' style={{ width: "90px", height: "80px" }}><img src='https://cdn-icons-png.flaticon.com/512/1830/1830844.png' style={{ width: "50px", height: "50px" }} /><p>syllabus</p></div></div>
+                <div className=''><div className='card d-flex flex-column align-items-center ' style={{ width: "90px", height: "80px" }}><img src='https://cdn-icons-png.flaticon.com/512/1830/1830844.png' style={{ width: "50px", height: "50px" }} /><p>bollywood</p></div></div>
+                <div className=''><div className='card d-flex flex-column align-items-center ' style={{ width: "90px", height: "80px" }}><img src='https://cdn-icons-png.flaticon.com/512/1830/1830844.png' style={{ width: "50px", height: "50px" }} /><p>History</p></div></div>
+            </div> */}
+            <div className='listing-page bg-light' >
                 <h1 className='listing-title text-dark'>Product Listing</h1>
 
                 <div className='name-drop-down-container d-flex align-items-center justify-content-between container'>

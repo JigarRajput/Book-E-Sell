@@ -31,7 +31,7 @@ const CartCard = ({ book }) => {
 
     const removeCartHandler = (book) => {
         dispatch(removeFromCartAction(book))
-        dispatch(priceDecreaseAction(multiplier * (book.price - book.price * (book.discount / 100))))
+        dispatch(priceDecreaseAction(multiplier * Math.round((book.price - book.price * (book.discount / 100)))))
         setMultiplier(1)
     }
 
@@ -51,14 +51,14 @@ const CartCard = ({ book }) => {
                         <label>{book.title}</label><br />
                         {/* <p>{book.description.substring(1, 20)}</p> */}
                         <div className='mt-4'>
-                            <button className='btn btn-dark btn-sm ' type='button' onClick={() => addHandler(book.price - book.price * (book.discount / 100))}> + </button>
+                            <button className='btn btn-dark btn-sm ' type='button' onClick={() => addHandler(Math.round(book.price - book.price * (book.discount / 100)))}> + </button>
                             {/* <input className='cart-button-input mx-2 ' type="number" maxLength="1"></input> */}
                             <label>&nbsp;{multiplier}&nbsp;</label>
-                            <button className='btn btn-dark btn-sm ' type='button' onClick={() => subtractHandler(book.price - book.price * (book.discount / 100))}>-</button>
+                            <button className='btn btn-dark btn-sm ' type='button' onClick={() => subtractHandler(Math.round(book.price - book.price * (book.discount / 100)))}>-</button>
                         </div>
                     </div>
                     <div className='cart-right_right d-flex flex-column justify-content-between'>
-                        <label>{book.price - book.price * (book.discount / 100)}</label>
+                        <label>{Math.round(book.price - book.price * (book.discount / 100))}</label>
                         <div className='price-discount mt-1'> <label className='mb-1'><del>{book.price}</del><p className='mx-3'>{book.discount}% off</p></label></div>
                         <button className='btn btn-dark btn-sm' onClick={() => removeCartHandler(book)}>Remove</button>
                     </div>
